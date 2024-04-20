@@ -1,0 +1,31 @@
+from task.models import Todos
+
+ModelName.objects.create(field_name=val)
+
+Todos.objects.create(title="water bill",user="swetha")
+=========================================
+fetch all records
+select*from  Todos
+
+queryset
+qs=ModelName.objects.all()
+==========================================
+
+orm query for filter record
+qs=Todos.objects.filter(user="cookie")
+
+fetch all pending todos inserted by user swetha
+qs=Todos.objects.filter(user="swetha",status=False)
+
+orm query for updating a record
+todos.objects.filter(id=1).update(status=true)
+
+fetch all records whose id in range(2,5)
+gte=>greater than equal todos
+lte
+gt
+lt
+in
+qs=Todos.objects.filter(title__in=["water bill","gas bill"])
+
+book

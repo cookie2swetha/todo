@@ -1,0 +1,51 @@
+from task.models import Books
+
+fetch all records
+select*from  Todos
+
+queryset
+qs=ModelName.objects.all()
+==========================================
+
+orm query for filter record
+qs=Todos.objects.filter(user="cookie")
+
+fetch all pending todos inserted by user swetha
+qs=Todos.objects.filter(user="swetha",status=False)
+
+orm query for updating a record
+Books.objects.filter(id=1).update(price=500)
+
+fetch all records whose id in range(2,5)
+gte=>greater than equal todos
+lte
+gt
+lt
+in
+qs=Books.objects.filter(title__in=["gently falls the bakula","dollar bahu"])
+
+orm query for listing a specific column
+qs=modelname.objects.all().value("id")
+qs=Books.objects.all().values("name")
+
+qs=Todos.objects.all().exclude(user="cookie")
+
+=======================================================
+
+employees
+1)orm query for inserting an employee record
+Employees.objects.create(emp="",hiredate="",mgr)
+
+2)orm query for fetching all employee record
+qs=Employee.objects.all()
+
+3)orm query for fetching all employee names only
+qs=Employees.objects.all().values("ename")
+
+4)orm query for update smith salary as 1000
+
+
+
+
+
+
